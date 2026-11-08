@@ -1,0 +1,402 @@
+
+/* ════════════════════════════════════════════════════════════════
+   BUILDOS SECTION EXTENSIONS — Role context, capability cards, mockup gallery
+   ═══════════════════════════════════════════════════════════════ */
+
+.bo-role-context {
+  margin-bottom: clamp(40px, 6vw, 64px);
+}
+
+.bo-role-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.bo-role-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.bo-role-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.bo-role-value {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+}
+
+.bo-cap-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.bo-cap-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  min-height: 200px;
+}
+
+.bo-cap-title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 4px 0;
+}
+
+.bo-cap-summary {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-sm) 0;
+  flex: 1;
+}
+
+.bo-cap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bo-cap-list li {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+  padding-left: 14px;
+  position: relative;
+}
+
+.bo-cap-list li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-size: 10px;
+}
+
+.bo-mockup-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-lg);
+  justify-items: center;
+}
+
+@media (max-width: 900px) {
+  .bo-role-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bo-cap-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bo-mockup-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .bo-role-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bo-cap-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bo-mockup-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* BuildOS chapter elements */
+.bo-chapter {
+  margin-bottom: clamp(60px, 8vw, 96px);
+}
+
+.bo-chapter-head {
+  margin-bottom: 24px;
+}
+
+.bo-chapter-num {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.bo-chapter-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: var(--color-text-primary);
+  margin: 0 0 8px 0;
+}
+
+.bo-chapter-kicker {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--color-text-secondary);
+  max-width: 60ch;
+}
+
+.bo-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.bo-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.bo-card--amber {
+  background: linear-gradient(135deg, rgba(255, 196, 0, 0.08), rgba(255, 196, 0, 0.02));
+  border-color: rgba(255, 196, 0, 0.2);
+}
+
+.bo-card-text {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.bo-flow {
+  display: grid;
+  gap: 12px;
+}
+
+.bo-flow-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr;
+  gap: 16px;
+  padding: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgba(242, 240, 234, 0.02);
+}
+
+.bo-flow-system {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.bo-flow-holds {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.bo-flow-failure {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.bo-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.bo-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.bo-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.bo-stat {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+.bo-stat-value {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.bo-stat-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-top: 8px;
+}
+
+.bo-stat-note {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.bo-cadence {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+}
+
+.bo-cadence-col {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 80px;
+}
+
+.bo-bar-value {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.bo-bar-track {
+  width: 40px;
+  height: 6px;
+  background: rgba(255, 196, 0, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bo-bar {
+  height: 100%;
+  background: var(--color-accent);
+}
+
+.bo-bar-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+.bo-path {
+  display: grid;
+  gap: 24px;
+}
+
+.bo-path-step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.bo-path-step-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+}
+
+.bo-path-step-text {
+  flex: 1;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.bo-quote {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.5vw, 30px);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  margin: 0 0 16px 0;
+  border-left: 3px solid var(--color-accent);
+  padding-left: 16px;
+}
+
+.bo-caveat {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.bo-note {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-top: 12px;
+}
+
+.bo-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.bo-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.bo-back:hover {
+  color: var(--color-accent);
+}
+
+.bo-btn--solid {
+  background: linear-gradient(135deg, #ffc400, #e0a000);
+  color: var(--color-accent-ink);
+}
