@@ -257,6 +257,13 @@
     padding: 0 clamp(20px, 4vw, 48px);
   }
 
+  .section-container {
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 clamp(20px, 4vw, 48px);
+  }
+
   .section {
     position: relative;
     padding: clamp(48px, 7vw, 64px) 0;
@@ -537,7 +544,7 @@
   .mobile-menu {
     position: fixed;
     inset: 0;
-    z-index: 70;
+    z-index: 90;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -3756,7 +3763,7 @@
   }
 
   .bo-path-step {
-    grid-template-columns: minmax(0, 1fr);
+    flex-direction: column;
     gap: 5px;
   }
 
@@ -3794,7 +3801,10 @@
   .stack-grid,
   .rec-grid,
   .rec-additional,
-  .process-grid {
+  .process-grid,
+  .bo-flow-row,
+  .bo-role-grid,
+  .bo-cap-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -3881,7 +3891,13 @@
   }
 }
 
-/* ═══════════════════════════════════════════════════════════
+@media (max-width: 460px) {
+  .hero-metrics {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ════════════════════════════════════════════════════════════
    ANIMATIONS
    ═══════════════════════════════════════════════════════════ */
 

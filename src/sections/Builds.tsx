@@ -71,9 +71,8 @@ export function Builds() {
               <img
                 src={buildos.meta.logo}
                 alt="BuildOS application icon"
-                width={512}
-                height={512}
                 loading="lazy"
+                className="max-w-full h-auto"
               />
               <span>
                 FLAGSHIP

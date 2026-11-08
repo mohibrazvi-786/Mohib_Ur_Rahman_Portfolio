@@ -15,7 +15,7 @@ export function BuildOSHero() {
   const status = statusConfig[statusKey as keyof typeof statusConfig]
 
   return (
-    <section id="buildos" className="relative mx-auto max-w-7xl px-4 py-20 md:px-8">
+    <section id="buildos" className="relative mx-auto max-w-[var(--container)] px-4 py-20 md:px-8">
       <div className="mb-8 flex items-center gap-3">
         <div className={`flex items-center gap-2 rounded-full ${status.color} px-4 py-2`}>
           <div className="h-2 w-2 animate-pulse rounded-full bg-white" />
@@ -66,10 +66,8 @@ export function BuildOSHero() {
             <img
               src={meta.logo}
               alt="BuildOS application icon"
-              width={512}
-              height={512}
               loading="lazy"
-              className="rounded-2xl border border-border-strong shadow-[0_20px_40px_-10px_rgba(0,0,0,0.6)]"
+              className="rounded-2xl border border-border-strong shadow-[0_20px_40px_-10px_rgba(0,0,0,0.6)] max-w-full h-auto"
             />
             <div className="absolute inset-0 rounded-2xl border border-accent/20 group-hover:border-accent/50 transition-colors" />
           </div>
